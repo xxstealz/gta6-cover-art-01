@@ -1,1 +1,26 @@
-[{"h":1000,"name":"2-editor.jpg","query":"?shot=editor&scene=sunset","w":1280},{"h":1080,"name":"1-cover.jpg","query":"?shot=cover&scene=sunset","w":1080},{"h":1080,"name":"3-cover.jpg","query":"?shot=cover&scene=neon","w":1080},{"h":720,"name":"4-cover.jpg","query":"?shot=cover&scene=dusk","w":1280}]
+[
+  {
+    "h": 1080,
+    "name": "1-cover.jpg",
+    "query": "?shot=cover&layout=trio&grade=sunset&title=SUNSET%20HEIST&subtitle=One%20last%20job%20under%20a%20neon%20sky&topline=SOLMAR%20BAY%20\u00b7%202026&size=1080x1080&panels=pier,boulevard,pier",
+    "w": 1080
+  },
+  {
+    "h": 1000,
+    "name": "2-editor.jpg",
+    "query": "?shot=editor&layout=trio&grade=sunset&title=SUNSET%20HEIST&subtitle=One%20last%20job%20under%20a%20neon%20sky&topline=SOLMAR%20BAY%20\u00b7%202026&size=1080x1080&panels=pier,boulevard,pier",
+    "w": 1280
+  },
+  {
+    "h": 1080,
+    "name": "3-cover.jpg",
+    "query": "?shot=cover&layout=split&grade=neon&title=NEON%20NIGHTS&subtitle=The%20city%20never%20sleeps%2C%20neither%20do%20we&topline=SOLMAR%20BAY%20\u00b7%202026&size=1080x1080&panels=boulevard,pier",
+    "w": 1080
+  },
+  {
+    "h": 720,
+    "name": "4-cover.jpg",
+    "query": "?shot=cover&layout=hero&grade=dusk&title=SOLMAR%20BAY&subtitle=Where%20the%20sunset%20never%20ends&topline=VICE%20COVER%20STUDIO&size=1920x1080&panels=pier&oy=0",
+    "w": 1280
+  }
+]

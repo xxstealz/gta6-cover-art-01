@@ -5,64 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vice Cover Studio — GTA-style cover art maker</title>
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="src/main.js"></script>
 </head>
 <body>
-<main class="app">
-  <section class="controls" aria-label="Cover controls">
-    <h1>VICE COVER STUDIO</h1>
-    <p class="tagline">Your photos. Your words. A poster-ready cover in a minute.</p>
-
-    <fieldset class="group">
-      <legend>1 · Layout</legend>
+<header class="brand">
+  <h1>VICE COVER STUDIO</h1>
+  <p>Your photos. Your words. A poster-ready cover in a minute.</p>
+</header>
+<main class="studio">
+  <aside class="controls" aria-label="Cover controls">
+    <section class="card">
+      <h2>1 · Layout</h2>
       <div class="row" id="layoutRow">
-        <button type="button" data-layout="trio" class="picked">Trio</button>
-        <button type="button" data-layout="split">Split</button>
-        <button type="button" data-layout="hero">Hero</button>
+        <button type="button" data-layout="trio" class="pick active">Trio</button>
+        <button type="button" data-layout="split" class="pick">Split</button>
+        <button type="button" data-layout="hero" class="pick">Hero</button>
       </div>
       <p class="hint">Trio: one big panel over two. Split: two halves. Hero: one full photo.</p>
-    </fieldset>
-
-    <fieldset class="group">
-      <legend>2 · Photos</legend>
+    </section>
+    <section class="card">
+      <h2>2 · Photos</h2>
       <div id="panels"></div>
       <p class="hint">Drag the preview to move a photo, or use its zoom slider. Photos never leave your machine.</p>
-    </fieldset>
-
-    <fieldset class="group">
-      <legend>3 · Words</legend>
-      <label>Title <input id="title" type="text" maxlength="24" value="SUNSET HEIST"></label>
-      <label>Subtitle <input id="subtitle" type="text" maxlength="48" value="One last job under a neon sky"></label>
-      <label>Tag line <input id="tag" type="text" maxlength="32" value="SOLMAR BAY · 2026"></label>
-    </fieldset>
-
-    <fieldset class="group">
-      <legend>4 · Grade</legend>
+    </section>
+    <section class="card">
+      <h2>3 · Words</h2>
+      <label for="titleInput">Title</label>
+      <input id="titleInput" type="text" value="SUNSET HEIST" maxlength="40" autocomplete="off">
+      <label for="subtitleInput">Subtitle</label>
+      <input id="subtitleInput" type="text" value="One last job under a neon sky" maxlength="80" autocomplete="off">
+      <label for="toplineInput">Top line</label>
+      <input id="toplineInput" type="text" value="SOLMAR BAY · 2026" maxlength="40" autocomplete="off">
+    </section>
+    <section class="card">
+      <h2>4 · Grade</h2>
       <div class="row" id="gradeRow">
-        <button type="button" data-grade="sunset" class="picked">Sunset</button>
-        <button type="button" data-grade="neon">Neon</button>
-        <button type="button" data-grade="dusk">Dusk</button>
+        <button type="button" data-grade="sunset" class="pick active">Sunset</button>
+        <button type="button" data-grade="neon" class="pick">Neon</button>
+        <button type="button" data-grade="dusk" class="pick">Dusk</button>
       </div>
-    </fieldset>
-
-    <fieldset class="group">
-      <legend>5 · Export</legend>
+      <p class="hint">Each grade is a colour wash, a retro striped sun and a vignette.</p>
+    </section>
+    <section class="card">
+      <h2>5 · Export PNG</h2>
       <div class="row" id="sizeRow">
-        <button type="button" data-size="1080x1080" class="picked">1080 × 1080</button>
-        <button type="button" data-size="1080x1350">1080 × 1350</button>
-        <button type="button" data-size="1920x1080">1920 × 1080</button>
+        <button type="button" data-size="1080x1080" class="pick active">1080 × 1080</button>
+        <button type="button" data-size="1080x1350" class="pick">1080 × 1350</button>
+        <button type="button" data-size="1920x1080" class="pick">1920 × 1080</button>
       </div>
-      <button id="export" type="button" class="primary">Export PNG</button>
-      <p id="status" role="status"></p>
-    </fieldset>
-  </section>
-
+      <button type="button" id="exportOne" class="cta">Download this size</button>
+      <button type="button" id="exportAll" class="cta ghost">Download all three sizes</button>
+      <p class="hint" id="exportNote">Exports at the exact pixel size shown. No upload, no watermark.</p>
+    </section>
+  </aside>
   <section class="stage" aria-label="Live preview">
-    <canvas id="cover" width="1080" height="1080"></canvas>
-    <p class="stage-hint">Live preview — drag a photo to reposition it.</p>
-    <p class="stage-hint">Photos stay on your device. Built for the make.fun GTA 6 cover art bounty.</p>
+    <canvas id="preview" width="1080" height="1080"></canvas>
+    <p class="hint">Live preview — drag a photo to reposition it.</p>
+    <p class="fine">Photos stay on your device. Built for the make.fun GTA 6 cover art bounty.</p>
   </section>
 </main>
-<script type="module" src="./src/main.js"></script>
 </body>
 </html>
