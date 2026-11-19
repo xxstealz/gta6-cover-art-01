@@ -1,0 +1,11 @@
+Fonts in this folder
+====================
+
+- Anton-Regular.ttf — "Anton" by Vernon Adams, Copyright 2020 The Anton
+  Project Authors. Licensed under the SIL Open Font License, Version 1.1
+  (https://openfontlicense.org). Used for the poster title lettering.
+- LiberationSans-Bold.ttf — "Liberation Sans" by Ascender Corporation,
+  licensed under the SIL Open Font License, Version 1.1. Used for subtitles,
+  tag lines and the app interface.
+
+Both fonts may be freely redistributed with this app under their licenses.
